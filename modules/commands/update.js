@@ -49,7 +49,7 @@ module.exports.run = async ({ api, message, args }) => {
     }
 
     try {
-        api.sendMessage("Checking for updates...", threadID, messageID);
+        // api.sendMessage("Checking for updates...", threadID, messageID);
 
         // 1. Fetch remote update.json
         const remoteManifestUrl = `${REPO_BASE_URL}update.json`;
