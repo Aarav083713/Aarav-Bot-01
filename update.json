@@ -1,26 +1,11 @@
 {
     "versions": [
         {
-            "version": "1.0.0",
-            "changelog": "Initial bot release with basic commands.",
-            "files": [
-                "index.js",
-                "package.json"
-            ]
-        },
-        {
             "version": "2.0.0",
-            "changelog": "Added AI enhancements and new commands.",
-            "files": [
-                "modules/commands/ai.js",
-                "modules/commands/bot.js"
-            ]
-        },
-        {
-            "version": "3.0.0",
             "changelog": "Runtime update helper and stability fixes.",
             "files": [
-                "modules/commands/update.js"
+                "modules/commands/update.js",
+                "update.json"
             ]
         }
     ]
