@@ -1,5 +1,5 @@
 {
-  "mongoURI": "",
+  "mongoURI": "mongodb+srv://manishsaxena7765_db_user:<db_password>@cluster0.emxj1dx.mongodb.net/?appName=Cluster0",
   "ownerID": "100052951819398",
   "adminIDs": [
     "100052951819398",
