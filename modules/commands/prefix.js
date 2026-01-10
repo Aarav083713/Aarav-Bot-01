@@ -9,7 +9,7 @@ module.exports = {
     aliases: ['botprefix', 'pfx'],
     description: 'Shows bot prefix and information when someone types "prefix"',
     usage: 'prefix',
-    credit: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
+    credit: "Aarav Mehra",
     hasPrefix: false,
     permission: 'PUBLIC',
     cooldown: 5,
