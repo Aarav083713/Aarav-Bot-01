@@ -32,15 +32,15 @@ var callback = () => api.sendMessage({body:` ╾━╤デ╦︻(▀̿Ĺ̯▀̿ �
 
 🔥Bot Admin🔥☞︎︎︎☜︎︎︎✰ Aarav💔🥀
 
-🙈bot andmin owner facebook id link🙈➪ https://www.facebook.com/profile.php?id=100082100890470 💞🕊️
+🙈bot andmin owner facebook id link🙈➪ https://www.facebook.com/aarav.mehra.19903 💞🕊️
 
-👋For Any Kind Of Help Contact On Instagram  Username 👉 ii_aarav_edit_ 😇
+👋For Any Kind Of Help Contact On Instagram  Username 👉 ii_aarav_edit 😇
 
 ✧══════•❁❀❁•══════✧
 
 🌸Bot Prefix🌸☞︎︎︎ + ☜︎︎︎✰ ${global.config.PREFIX}
 
-♥️Bot Owner♥️ ☞︎︎︎ Tʋjʜĸo-Hi'Dulhan Bʌŋaʋnga Nʌʜɩ-To'Kunwara Mʌʀ-Jʌwʋ ☜︎︎︎✰ 
+♥️Bot Owner♥️ ☞︎︎︎ Aarav Mehra ☜︎︎︎✰ 
 
 🥳UPTIME🥳
 
