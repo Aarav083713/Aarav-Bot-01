@@ -6,7 +6,7 @@
 module.exports = {
   config: {
     name: "botinfo",
-    aliases: ["info", "about"],
+    aliases: ["in", "about"],
     description: "Displays comprehensive information about the bot, its features, and status",
     usages: `${global.config.prefix}botinfo`,
     credit: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
