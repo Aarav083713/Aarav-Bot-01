@@ -1,0 +1,49 @@
+name: Aarav Bot Full Auto (5H Restart)
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 */5 * * *"
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 🟢 Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: 🧱 Canvas Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libcairo2-dev \
+            libjpeg-dev \
+            libpango1.0-dev \
+            libgif-dev \
+            build-essential \
+            pkg-config \
+            libpixman-1-dev
+
+      - name: 🔐 Inject Appstate
+        run: |
+          echo "$APPSTATE" > appstate.json
+        env:
+          APPSTATE: ${{ secrets.APPSTATE }}
+
+      - name: 📦 Install
+        run: |
+          npm cache clean --force
+          npm install
+          npm rebuild canvas
+
+      - name: 🤖 Start Bot
+        run: npm start
