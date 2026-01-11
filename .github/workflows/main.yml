@@ -1,0 +1,28 @@
+name: Aarav Bot Auto Restart (5H)
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 */5 * * *"   # ✅ har 5 ghante job start hogi
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300    # ✅ 5 hours = 300 minutes
+
+    steps:
+      - name: 📥 Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: 📦 Install Dependencies
+        run: npm install
+
+      - name: 🤖 Run Bot
+        run: node index.js
