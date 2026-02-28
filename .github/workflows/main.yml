@@ -1,0 +1,21 @@
+name: Force FB Bot Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: |
+          echo "Bot start ho gaya Aarav Shorts ✅"
+          node bot.js &
+          sleep 21600
