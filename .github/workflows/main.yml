@@ -1,0 +1,27 @@
+name: Run Aarav Bot
+
+on:
+  workflow_dispatch:   # manual run button
+  schedule:
+    - cron: "*/30 * * * *"
+
+concurrency:
+  group: aarav-bot
+  cancel-in-progress: true
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350   # runner ko jaldi band na kare
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - run: npm install
+
+      - name: Start Bot
+        run: node index.js
