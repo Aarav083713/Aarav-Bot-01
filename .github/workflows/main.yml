@@ -1,0 +1,29 @@
+name: Run Aarav Bot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"   # optional (30 min me ek baar)
+
+concurrency:
+  group: aarav-bot
+  cancel-in-progress: true   # purana run auto stop
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repo Clone
+        uses: actions/checkout@v4
+
+      - name: Node Setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Start Bot
+        run: node index.js
