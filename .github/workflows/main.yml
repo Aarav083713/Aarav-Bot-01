@@ -1,0 +1,35 @@
+name: Run Aarav Bot
+
+on:
+  workflow_dispatch:   # sirf manual run (safe)
+
+concurrency:
+  group: aarav-bot
+  cancel-in-progress: true   # ek time me sirf 1 run
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Start Bot (Auto Restart)
+        run: |
+          echo "Starting AaravBot..."
+          while true
+          do
+            node index.js
+            echo "Bot stopped. Restarting in 5 seconds..."
+            sleep 5
+          done
