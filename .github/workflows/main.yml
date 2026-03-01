@@ -1,0 +1,25 @@
+name: Aarav Bot Runner
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: aarav-bot
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - run: npm install
+
+      - name: Start Bot
+        run: node index.js
